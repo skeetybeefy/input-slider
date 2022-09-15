@@ -1,0 +1,48 @@
+:root {
+  --padding: 5px;
+  --color-1: #36ab21;
+  --color-2: gray;
+  --input-border: 1px;
+}
+
+.input {
+  width: 95%;
+  height: 1.5rem;
+  text-align: center;
+  padding: var(--padding);
+  outline: none;
+  border: var(--input-border) solid var(--color-2);
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.slider {
+  --progress: 0%;
+  width: calc(95% + 2 * var(--padding) + var(--input-border) * 2);
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+  bottom: calc(var(--padding) / 2);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: relative;
+  bottom: 6px;
+  z-index: 2;
+  background: black;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-1) 0%, var(--color-1) var(--progress), var(--color-2) var(--progress), var(--color-2) 100%);
+  --track-color: var(--color-2);
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  z-index: 1;
+}
