@@ -41,7 +41,6 @@
 .slider::-webkit-slider-runnable-track {
   height: 4px;
   background: linear-gradient(90deg, var(--color-1) 0%, var(--color-1) var(--progress), var(--color-2) var(--progress), var(--color-2) 100%);
-  --track-color: var(--color-2);
   border-radius: 0 0 10px 10px;
   position: relative;
   z-index: 1;
